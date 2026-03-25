@@ -12,7 +12,7 @@ export default function Hero() {
         {/* Credibility badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.03] text-white/40 text-xs mb-10 tracking-wide">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          VP Engineering · JPMorgan · Full Stack · London
+          Full stack engineer · 7 years experience · London
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.08] mb-6">

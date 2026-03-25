@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -11,8 +12,18 @@ export default function ContactPage() {
   return (
     <div className="pt-32 pb-24 max-w-6xl mx-auto px-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-        {/* Left: info */}
+        {/* Left: photo + info stacked */}
         <div>
+          {/* Photo */}
+          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/[0.07] mb-8">
+            <Image
+              src="/headshot.jpg"
+              alt="Harrison Boyns"
+              fill
+              className="object-cover object-[center_25%]"
+            />
+          </div>
+
           <p className="text-white/25 text-xs uppercase tracking-widest mb-3">
             Get in touch
           </p>
@@ -21,7 +32,7 @@ export default function ContactPage() {
             <br />
             <span className="text-white/25">something great.</span>
           </h1>
-          <p className="text-white/40 text-lg leading-relaxed mb-12">
+          <p className="text-white/40 text-lg leading-relaxed mb-10">
             Tell me about your business and what you&apos;re looking for.
             I&apos;ll get back to you within 24 hours.
           </p>
