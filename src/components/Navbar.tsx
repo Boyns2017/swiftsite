@@ -16,10 +16,10 @@ export default function Navbar() {
           Swift<span className="text-white/30">site</span>
         </Link>
 
-        <nav className="flex items-center gap-8">
+        <nav className="flex items-center gap-6">
           <Link
             href="/work"
-            className={`text-sm transition-colors ${
+            className={`hidden sm:block text-sm transition-colors ${
               pathname === "/work"
                 ? "text-white"
                 : "text-white/50 hover:text-white"
@@ -29,7 +29,7 @@ export default function Navbar() {
           </Link>
           <Link
             href="/contact"
-            className={`text-sm transition-colors ${
+            className={`hidden sm:block text-sm transition-colors ${
               pathname === "/contact"
                 ? "text-white"
                 : "text-white/50 hover:text-white"
