@@ -43,7 +43,7 @@ export default function ContactPage() {
                 ✉
               </div>
               <span className="text-white/45 text-sm">
-                hello@swiftsite.co.uk
+                hello@swiftsite.tech
               </span>
             </div>
             <div className="flex items-center gap-4">

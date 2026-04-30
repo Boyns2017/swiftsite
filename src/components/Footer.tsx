@@ -12,7 +12,7 @@ export default function Footer() {
             Swift<span className="text-white/30">site</span>
           </Link>
           <p className="text-white/30 text-sm mt-1">Harrison Boyns · London</p>
-          <p className="text-white/30 text-sm">hello@swiftsite.co.uk</p>
+          <p className="text-white/30 text-sm">hello@swiftsite.tech</p>
         </div>
 
         <div className="flex items-center gap-6">

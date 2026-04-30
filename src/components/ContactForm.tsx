@@ -115,7 +115,7 @@ export default function ContactForm() {
 
       {state === "error" && (
         <p className="text-red-400/70 text-sm">
-          Something went wrong. Please try again or email hello@swiftsite.co.uk
+          Something went wrong. Please try again or email hello@swiftsite.tech
           directly.
         </p>
       )}

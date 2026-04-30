@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
     }
 
     // TODO: Wire up to an email service (e.g. Resend, Nodemailer)
-    // e.g. await resend.emails.send({ from: ..., to: "hello@swiftsite.co.uk", ... })
+    // e.g. await resend.emails.send({ from: ..., to: "hello@swiftsite.tech", ... })
     console.log("Contact form submission:", { name, email, business, message });
 
     return NextResponse.json({ success: true });

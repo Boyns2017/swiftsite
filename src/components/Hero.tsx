@@ -24,7 +24,7 @@ export default function Hero() {
         <p className="text-lg text-white/45 max-w-xl mx-auto mb-10 leading-relaxed">
           Professional, fast websites built by a senior engineer — not a
           template. For small businesses, freelancers, and personal brands.
-          From&nbsp;£799.
+          From&nbsp;£1,500.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">

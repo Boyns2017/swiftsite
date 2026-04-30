@@ -1,26 +1,54 @@
 import Link from "next/link";
 
-const included = [
-  "Custom design — no templates",
-  "Up to 5 pages included",
-  "Mobile-first and fully responsive",
-  "SEO fundamentals built in",
-  "Contact form",
-  "1 round of revisions",
-  "Deployed and live on fast hosting",
-];
-
-const retainerIncluded = [
-  "Content updates on request",
-  "Performance monitoring",
-  "Security & dependency updates",
-  "Priority support",
-  "Monthly check-in",
-];
-
-const addons = [
-  { label: "Extra pages", price: "£75 / page" },
-  { label: "Google Business setup", price: "£99 one-off" },
+const tiers = [
+  {
+    name: "Static Site",
+    tagline: "Simple info site, no moving parts",
+    build: "£1,500",
+    hosting: "£25",
+    hostingSuffix: "/mo",
+    features: [
+      "Custom design — no templates",
+      "Up to 5 pages included",
+      "Mobile-first and fully responsive",
+      "SEO fundamentals built in",
+      "Contact form",
+      "1 round of revisions",
+      "Deployed and live on fast hosting",
+    ],
+  },
+  {
+    name: "Dynamic Site",
+    tagline: "Blog or content you can update yourself",
+    build: "£2,500",
+    hosting: "£50",
+    hostingSuffix: "/mo",
+    featured: true,
+    features: [
+      "Custom design — no templates",
+      "Blog or news section",
+      "Content you can edit yourself",
+      "Mobile-first and fully responsive",
+      "SEO fundamentals built in",
+      "Contact form",
+      "1 round of revisions",
+    ],
+  },
+  {
+    name: "E-commerce",
+    tagline: "Online shop or anything more complex",
+    build: "£3,500+",
+    hosting: "£75–100",
+    hostingSuffix: "/mo",
+    features: [
+      "Online shop & product pages",
+      "Payment integration",
+      "Order management",
+      "Mobile-first and fully responsive",
+      "SEO fundamentals built in",
+      "Scoped to your requirements",
+    ],
+  },
 ];
 
 export default function Pricing() {
@@ -35,139 +63,84 @@ export default function Pricing() {
           <br />
           <span className="text-white/25">No surprises.</span>
         </h2>
+        <p className="text-white/35 text-sm mt-4 max-w-sm mx-auto">
+          Agencies charge £4,500+ for this. You won&apos;t.
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
-        {/* Build card */}
-        <div className="rounded-3xl border border-white/10 bg-white/[0.025] p-10 flex flex-col">
-          <div className="flex items-start justify-between mb-8">
-            <div>
-              <h3 className="text-white font-bold text-2xl mb-1">
-                Website Build
-              </h3>
-              <p className="text-white/35 text-sm">
-                Everything you need to launch
-              </p>
-            </div>
-            <div className="text-right shrink-0 ml-4">
-              <div className="text-white font-bold text-4xl tracking-tight">
-                £799
-              </div>
-              <div className="text-white/30 text-sm">one-off</div>
-            </div>
-          </div>
-
-          <ul className="space-y-3 mb-10 flex-1">
-            {included.map((item) => (
-              <li
-                key={item}
-                className="flex items-center gap-3 text-sm text-white/55"
-              >
-                <svg
-                  className="w-4 h-4 text-white/25 shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                {item}
-              </li>
-            ))}
-          </ul>
-
-          <Link
-            href="/contact"
-            className="block w-full text-center px-6 py-4 bg-white text-black text-sm font-semibold rounded-full hover:bg-white/90 transition-colors"
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {tiers.map((tier) => (
+          <div
+            key={tier.name}
+            className={`rounded-3xl border p-8 flex flex-col ${
+              tier.featured
+                ? "border-white/20 bg-white/[0.05]"
+                : "border-white/10 bg-white/[0.025]"
+            }`}
           >
-            Start your project
-          </Link>
+            <div className="mb-8">
+              {tier.featured && (
+                <p className="text-white/30 text-xs uppercase tracking-widest mb-3">
+                  Most popular
+                </p>
+              )}
+              <h3 className="text-white font-bold text-xl mb-1">{tier.name}</h3>
+              <p className="text-white/35 text-sm mb-5">{tier.tagline}</p>
+              <div className="text-white font-bold text-4xl tracking-tight">
+                {tier.build}
+              </div>
+              <div className="text-white/30 text-sm">one-off build</div>
+              <div className="mt-2 text-white/40 text-sm">
+                + {tier.hosting}
+                {tier.hostingSuffix} hosting
+              </div>
+            </div>
 
-          <div className="mt-8 pt-8 border-t border-white/[0.07]">
-            <p className="text-white/25 text-xs uppercase tracking-widest mb-4">
-              Add-ons
-            </p>
-            <div className="space-y-2.5">
-              {addons.map((addon) => (
-                <div key={addon.label} className="flex justify-between text-sm">
-                  <span className="text-white/45">{addon.label}</span>
-                  <span className="text-white/35">{addon.price}</span>
-                </div>
+            <ul className="space-y-3 mb-10 flex-1">
+              {tier.features.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-center gap-3 text-sm text-white/55"
+                >
+                  <svg
+                    className="w-4 h-4 text-white/25 shrink-0"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  {item}
+                </li>
               ))}
-            </div>
+            </ul>
+
+            <Link
+              href="/contact"
+              className={`block w-full text-center px-6 py-4 text-sm font-semibold rounded-full transition-all ${
+                tier.featured
+                  ? "bg-white text-black hover:bg-white/90"
+                  : "border border-white/15 text-white/70 hover:text-white hover:border-white/30"
+              }`}
+            >
+              Start your project
+            </Link>
           </div>
-        </div>
-
-        {/* Retainer card */}
-        <div className="rounded-3xl border border-white/10 bg-white/[0.025] p-10 flex flex-col">
-          <div className="flex items-start justify-between mb-8">
-            <div>
-              <h3 className="text-white font-bold text-2xl mb-1">
-                Maintenance
-              </h3>
-              <p className="text-white/35 text-sm">
-                Keep your site fresh & secure
-              </p>
-            </div>
-            <div className="text-right shrink-0 ml-4">
-              <div className="text-white font-bold text-4xl tracking-tight">
-                £49
-              </div>
-              <div className="text-white/30 text-sm">/ month</div>
-            </div>
-          </div>
-
-          <ul className="space-y-3 mb-10 flex-1">
-            {retainerIncluded.map((item) => (
-              <li
-                key={item}
-                className="flex items-center gap-3 text-sm text-white/55"
-              >
-                <svg
-                  className="w-4 h-4 text-white/25 shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                {item}
-              </li>
-            ))}
-          </ul>
-
-          <Link
-            href="/contact"
-            className="block w-full text-center px-6 py-4 border border-white/15 text-white/70 text-sm font-semibold rounded-full hover:text-white hover:border-white/30 transition-all"
-          >
-            Add to your project
-          </Link>
-
-          <div className="mt-8 pt-8 border-t border-white/[0.07]">
-            <p className="text-white/25 text-xs leading-relaxed">
-              Available as an add-on after your site is built. Cancel anytime.
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
 
       <p className="text-center text-white/25 text-sm mt-8">
-        Need something custom?{" "}
+        Monthly hosting covers everything — keeping it live, fast and maintained.{" "}
         <Link
           href="/contact"
           className="text-white/45 hover:text-white transition-colors underline underline-offset-2"
         >
-          Let&apos;s talk.
+          Not sure what you need? Let&apos;s talk.
         </Link>
       </p>
     </section>

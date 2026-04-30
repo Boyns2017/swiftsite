@@ -12,7 +12,7 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: "SwiftSite — Professional Websites for Small Businesses",
   description:
-    "Fast, professional websites for small businesses, freelancers, and personal brands. Built by a VP of Engineering in London. From £799.",
+    "Fast, professional websites for small businesses, freelancers, and personal brands. Built by a VP of Engineering in London. From £1,500.",
 };
 
 export default function RootLayout({
