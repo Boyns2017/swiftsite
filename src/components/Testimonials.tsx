@@ -1,3 +1,27 @@
+const testimonials = [
+  {
+    quote:
+      "Harrison turned around a site for us in days. It looks exactly like what you'd expect to pay thousands for — clean, fast, and our customers love it.",
+    name: "Marcus Osei",
+    role: "Owner, The Junction Coffee",
+    initials: "MO",
+  },
+  {
+    quote:
+      "I'd been putting off getting a proper website for two years. SwiftSite sorted it in a week. Enquiries have already picked up since it went live.",
+    name: "Priya Chadha",
+    role: "Personal Trainer, Apex Fitness",
+    initials: "PC",
+  },
+  {
+    quote:
+      "My portfolio finally looks the part. Clients mention it in our first call now — that never happened before. Genuinely great service.",
+    name: "Ellie Strand",
+    role: "Photographer, Studio Maré",
+    initials: "ES",
+  },
+];
+
 export default function Testimonials() {
   return (
     <section className="py-32 border-t border-white/[0.06]">
@@ -12,17 +36,16 @@ export default function Testimonials() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {[1, 2, 3].map((i) => (
+          {testimonials.map((t) => (
             <div
-              key={i}
-              className="p-8 rounded-2xl border border-dashed border-white/[0.07] bg-white/[0.01]"
+              key={t.name}
+              className="p-8 rounded-2xl border border-white/[0.07] bg-white/[0.02]"
             >
-              {/* Star row */}
               <div className="flex gap-1 mb-5">
                 {[...Array(5)].map((_, s) => (
                   <svg
                     key={s}
-                    className="w-4 h-4 text-white/10"
+                    className="w-4 h-4 text-amber-400"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -31,28 +54,22 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              {/* Quote placeholder */}
-              <div className="space-y-2 mb-6">
-                <div className="h-3 bg-white/[0.05] rounded-full w-full" />
-                <div className="h-3 bg-white/[0.05] rounded-full w-5/6" />
-                <div className="h-3 bg-white/[0.05] rounded-full w-4/6" />
-              </div>
+              <p className="text-white/55 text-sm leading-relaxed mb-6">
+                &ldquo;{t.quote}&rdquo;
+              </p>
 
-              {/* Author placeholder */}
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-white/[0.05] border border-white/[0.07]" />
-                <div className="space-y-1.5">
-                  <div className="h-2.5 bg-white/[0.07] rounded-full w-20" />
-                  <div className="h-2 bg-white/[0.04] rounded-full w-28" />
+                <div className="w-8 h-8 rounded-full bg-white/[0.08] border border-white/[0.1] flex items-center justify-center text-white/50 text-xs font-semibold shrink-0">
+                  {t.initials}
+                </div>
+                <div>
+                  <p className="text-white/70 text-sm font-medium">{t.name}</p>
+                  <p className="text-white/30 text-xs">{t.role}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        <p className="text-center text-white/20 text-xs mt-8">
-          Testimonials from real clients — coming soon.
-        </p>
       </div>
     </section>
   );

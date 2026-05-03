@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import WorkGrid from "@/components/WorkGrid";
 
 export const metadata: Metadata = {
   title: "Work — SwiftSite",
@@ -23,24 +23,7 @@ export default function WorkPage() {
         </p>
       </div>
 
-      {/* Empty state */}
-      <div className="rounded-3xl border border-dashed border-white/10 bg-white/[0.01] py-32 flex flex-col items-center justify-center text-center px-6">
-        <div className="w-14 h-14 rounded-2xl border border-white/10 bg-white/[0.03] flex items-center justify-center text-2xl mb-6">
-          🚀
-        </div>
-        <h2 className="text-white font-semibold text-xl mb-2">
-          Projects coming soon
-        </h2>
-        <p className="text-white/35 text-sm max-w-xs leading-relaxed mb-8">
-          Be one of the first. Every site built gets featured here.
-        </p>
-        <Link
-          href="/contact"
-          className="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-black text-sm font-semibold rounded-full hover:bg-white/90 transition-colors"
-        >
-          Start your project
-        </Link>
-      </div>
+      <WorkGrid />
     </div>
   );
 }
