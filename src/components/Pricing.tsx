@@ -21,7 +21,7 @@ const tiers = [
   {
     name: "Dynamic Site",
     tagline: "Blog or content you can update yourself",
-    build: "£2,500",
+    build: "£1,500",
     hosting: "£50",
     hostingSuffix: "/mo",
     features: [
@@ -31,13 +31,13 @@ const tiers = [
       "Mobile-first and fully responsive",
       "SEO fundamentals built in",
       "Contact form",
-      "1 round of revisions",
+      "5 rounds of revisions",
     ],
   },
   {
     name: "E-commerce",
     tagline: "Online shop or anything more complex",
-    build: "£3,500+",
+    build: "£2,500",
     hosting: "£75–100",
     hostingSuffix: "/mo",
     features: [
@@ -47,6 +47,7 @@ const tiers = [
       "Mobile-first and fully responsive",
       "SEO fundamentals built in",
       "Scoped to your requirements",
+      "8 rounds of revisions",
     ],
   },
 ];
