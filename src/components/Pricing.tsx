@@ -4,16 +4,17 @@ const tiers = [
   {
     name: "Static Site",
     tagline: "Simple info site, no moving parts",
-    build: "£1,500",
+    build: "£800",
     hosting: "£25",
     hostingSuffix: "/mo",
+    featured: true,
     features: [
       "Custom design — no templates",
       "Up to 5 pages included",
       "Mobile-first and fully responsive",
       "SEO fundamentals built in",
       "Contact form",
-      "1 round of revisions",
+      "3 meetings included",
       "Deployed and live on fast hosting",
     ],
   },
@@ -23,7 +24,6 @@ const tiers = [
     build: "£2,500",
     hosting: "£50",
     hostingSuffix: "/mo",
-    featured: true,
     features: [
       "Custom design — no templates",
       "Blog or news section",

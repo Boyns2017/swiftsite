@@ -22,6 +22,21 @@ const testimonials = [
   },
 ];
 
+const examples = [
+  {
+    name: "Fen.Elektra",
+    desc: "Creative portfolio — floral & visual design",
+    url: "https://fen-elektra.vercel.app/",
+    display: "fen-elektra.vercel.app",
+  },
+  {
+    name: "Momiji Charity",
+    desc: "Charity website",
+    url: "https://momijicharity.com/",
+    display: "momijicharity.com",
+  },
+];
+
 export default function Testimonials() {
   return (
     <section className="py-32 border-t border-white/[0.06]">
@@ -69,6 +84,45 @@ export default function Testimonials() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Live examples */}
+        <div className="mt-16">
+          <p className="text-white/25 text-xs uppercase tracking-widest mb-5 text-center">
+            Live examples
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            {examples.map((e) => (
+              <a
+                key={e.url}
+                href={e.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between p-5 rounded-2xl border border-white/[0.07] bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/[0.12] transition-all"
+              >
+                <div>
+                  <p className="text-white/80 text-sm font-medium group-hover:text-white transition-colors">
+                    {e.name}
+                  </p>
+                  <p className="text-white/30 text-xs mt-0.5">{e.desc}</p>
+                  <p className="text-white/20 text-xs mt-1 font-mono">{e.display}</p>
+                </div>
+                <svg
+                  className="w-4 h-4 text-white/20 group-hover:text-white/50 transition-colors shrink-0 ml-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -12,7 +12,7 @@ export default function Hero() {
         {/* Credibility badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.03] text-white/40 text-xs mb-10 tracking-wide">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          Full stack engineer · 7 years experience · London
+          Full stack engineer · 10 years experience · London
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.08] mb-6">
@@ -22,9 +22,9 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg text-white/45 max-w-xl mx-auto mb-10 leading-relaxed">
-          Professional, fast websites built by a senior engineer — not a
+          Built by a former VP of Engineering at JPMorgan and PlanA — not a
           template. For small businesses, freelancers, and personal brands.
-          From&nbsp;£1,500.
+          From&nbsp;£800.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">

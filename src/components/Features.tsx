@@ -16,8 +16,8 @@ const features = [
     desc: "Clean HTML, fast load times, and correct metadata so Google can find and rank your site.",
   },
   {
-    title: "Secure by default",
-    desc: "HTTPS, modern hosting, and secure form handling. Built by someone who takes security seriously.",
+    title: "Senior engineering background",
+    desc: "Former VP of Engineering at JPMorgan and PlanA, with 10 years in the industry. MSc Computer Science (Bristol), BSc Neuroscience (King's College London).",
   },
   {
     title: "Ongoing support",
