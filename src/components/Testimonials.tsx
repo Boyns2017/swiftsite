@@ -1,24 +1,17 @@
 const testimonials = [
   {
     quote:
-      "Harrison turned around a site for us in days. It looks exactly like what you'd expect to pay thousands for — clean, fast, and our customers love it.",
-    name: "Marcus Osei",
-    role: "Owner, The Junction Coffee",
-    initials: "MO",
+      "Harrison built us a site we\'re genuinely proud of. It\'s clean, fast, and actually represents what the charity stands for. Couldn\'t have asked for more.",
+    name: "Momiji Charity",
+    role: "momijicharity.com",
+    initials: "MC",
   },
   {
     quote:
-      "I'd been putting off getting a proper website for two years. SwiftSite sorted it in a week. Enquiries have already picked up since it went live.",
-    name: "Priya Chadha",
-    role: "Personal Trainer, Apex Fitness",
-    initials: "PC",
-  },
-  {
-    quote:
-      "My portfolio finally looks the part. Clients mention it in our first call now — that never happened before. Genuinely great service.",
-    name: "Ellie Strand",
-    role: "Photographer, Studio Maré",
-    initials: "ES",
+      "My portfolio finally looks the part. Exactly the aesthetic I had in my head — Harrison got it straight away and delivered it fast.",
+    name: "Fen.Elektra",
+    role: "fen-elektra.vercel.app",
+    initials: "FE",
   },
 ];
 

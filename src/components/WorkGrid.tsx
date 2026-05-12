@@ -1,27 +1,15 @@
 const projects = [
   {
-    name: "The Junction Coffee",
-    type: "Small Business",
-    desc: "A boutique coffee shop in East London. Brochure site with menu, story, and location page.",
-    tags: ["Brochure", "Local SEO"],
+    name: "Momiji Charity",
+    type: "Charity",
+    desc: "Website for a UK-based charity. Clean, accessible site with mission, events, and a donation-focused contact page.",
+    tags: ["Charity", "Accessible", "Mobile-first"],
   },
   {
-    name: "Apex Fitness",
-    type: "Personal Trainer",
-    desc: "PT studio in South London. Service pages, client testimonials, and a contact booking form.",
-    tags: ["Booking Form", "Mobile-first"],
-  },
-  {
-    name: "Studio Maré",
-    type: "Photographer",
-    desc: "Portfolio site for a wedding photographer. Gallery, about page, and enquiry form.",
-    tags: ["Portfolio", "Gallery"],
-  },
-  {
-    name: "Lawson & Co",
-    type: "Solicitors",
-    desc: "Professional firm website with practice areas, team profiles, and a secure contact page.",
-    tags: ["Professional", "SEO"],
+    name: "Fen.Elektra",
+    type: "Creative Portfolio",
+    desc: "Portfolio site for a floral and visual designer. Full-page gallery, about section, and enquiry form.",
+    tags: ["Portfolio", "Gallery", "Creative"],
   },
 ];
 

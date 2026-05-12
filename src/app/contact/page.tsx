@@ -15,14 +15,20 @@ export default function ContactPage() {
         {/* Left: photo + info stacked */}
         <div>
           {/* Photo */}
-          <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/[0.07] mb-8">
+          <a
+            href="https://www.linkedin.com/in/harrison-boyns/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/[0.07] mb-8 group"
+          >
             <Image
               src="/headshot.jpg"
               alt="Harrison Boyns"
               fill
-              className="object-cover object-[center_25%]"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-[center_25%] group-hover:scale-[1.02] transition-transform duration-300"
             />
-          </div>
+          </a>
 
           <p className="text-white/25 text-xs uppercase tracking-widest mb-3">
             Get in touch
@@ -42,9 +48,12 @@ export default function ContactPage() {
               <div className="w-9 h-9 rounded-full border border-white/10 bg-white/[0.03] flex items-center justify-center text-white/30 text-sm shrink-0">
                 ✉
               </div>
-              <span className="text-white/45 text-sm">
+              <a
+                href="mailto:hello@swiftsite.tech"
+                className="text-white/45 text-sm hover:text-white/70 transition-colors"
+              >
                 hello@swiftsite.tech
-              </span>
+              </a>
             </div>
             <div className="flex items-center gap-4">
               <div className="w-9 h-9 rounded-full border border-white/10 bg-white/[0.03] flex items-center justify-center text-white/30 text-sm shrink-0">
