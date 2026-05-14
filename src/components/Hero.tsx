@@ -22,9 +22,10 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg text-white/45 max-w-xl mx-auto mb-10 leading-relaxed">
-          Built by a former VP of Engineering at JPMorgan and PlanA — fast,
-          reliable, and actually yours. No templates, no platform lock-in.
-          From&nbsp;£600.
+          Built by a former VP of Engineering at JPMorgan and PlanA — the same
+          standards behind bank-grade systems, without the agency middleman or
+          the bank-grade price. Fast, reliable, and actually yours. No
+          templates, no platform lock-in. From&nbsp;£600.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
