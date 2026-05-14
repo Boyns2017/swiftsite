@@ -4,7 +4,7 @@ const tiers = [
   {
     name: "Static Site",
     tagline: "Simple info site, no moving parts",
-    build: "£800",
+    build: "£600",
     hosting: "£25",
     hostingSuffix: "/mo",
     featured: true,
@@ -21,7 +21,7 @@ const tiers = [
   {
     name: "Dynamic Site",
     tagline: "Blog or content you can update yourself",
-    build: "£1,500",
+    build: "£1,300",
     hosting: "£50",
     hostingSuffix: "/mo",
     features: [
@@ -37,7 +37,7 @@ const tiers = [
   {
     name: "E-commerce",
     tagline: "Online shop or anything more complex",
-    build: "£2,500",
+    build: "£2,300",
     hosting: "£75–100",
     hostingSuffix: "/mo",
     features: [
